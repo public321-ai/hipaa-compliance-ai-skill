@@ -1,0 +1,21 @@
+{
+  "mapping_version": "1.0",
+  "frameworks": {
+    "source": "HIPAA Security Rule",
+    "target": "NIST SP 800-53 Rev 5"
+  },
+  "mappings": [
+    {"hipaa": "164.308(a)(1)(ii)(A) - Risk Analysis", "nist": "RA-3 - Risk Assessment"},
+    {"hipaa": "164.308(a)(1)(ii)(B) - Risk Management", "nist": "RA-3 - Risk Assessment; PM-9 - Risk Management Strategy"},
+    {"hipaa": "164.308(a)(3) - Workforce Security", "nist": "PS-2 - Position Risk Designation; PS-3 - Personnel Screening"},
+    {"hipaa": "164.308(a)(4) - Information Access Management", "nist": "AC-2 - Account Management; AC-3 - Access Enforcement"},
+    {"hipaa": "164.308(a)(5) - Security Awareness", "nist": "AT-2 - Security Awareness Training; AT-3 - Role-Based Training"},
+    {"hipaa": "164.308(a)(6) - Security Incident Procedures", "nist": "IR-4 - Incident Handling; IR-8 - Incident Response Plan"},
+    {"hipaa": "164.308(a)(7) - Contingency Plan", "nist": "CP-2 - Contingency Plan; CP-9 - Information System Backup; CP-10 - Information System Recovery"},
+    {"hipaa": "164.312(a)(1) - Access Control", "nist": "AC-2 - Account Management; AC-3 - Access Enforcement; AC-17 - Remote Access"},
+    {"hipaa": "164.312(b) - Audit Controls", "nist": "AU-3 - Content of Audit Records; AU-6 - Audit Review; AU-12 - Audit Generation"},
+    {"hipaa": "164.312(c)(1) - Integrity", "nist": "SI-7 - Software, Firmware, and Information Integrity"},
+    {"hipaa": "164.312(d) - Person/Entity Authentication", "nist": "IA-2 - Identification and Authentication; IA-5 - Authenticator Management"},
+    {"hipaa": "164.312(e)(1) - Transmission Security", "nist": "SC-8 - Transmission Confidentiality and Integrity; SC-13 - Cryptographic Protection"}
+  ]
+}

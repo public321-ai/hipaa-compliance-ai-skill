@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Breach Report",
+  "type": "object",
+  "required": ["breach_id", "discovery_date", "phi_involved", "individuals_affected", "notification_status"],
+  "properties": {
+    "breach_id": {"type": "string", "format": "uuid"},
+    "discovery_date": {"type": "string", "format": "date"},
+    "breach_type": {"type": "string", "enum": ["unauthorized_access", "theft", "loss", "improper_disclosure", "hacking", "unencrypted_media"]},
+    "phi_involved": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["name", "ssn", "mrn", "dob", "diagnosis", "treatment", "financial", "other"]}
+    },
+    "individuals_affected": {"type": "integer", "minimum": 0},
+    "risk_assessment": {
+      "type": "object",
+      "required": ["low_probability_demonstrated"],
+      "properties": {
+        "low_probability_demonstrated": {"type": "boolean"},
+        "factors": {"type": "array", "items": {"type": "string"}},
+        "risk_score": {"type": "integer", "minimum": 1, "maximum": 25}
+      }
+    },
+    "notification_status": {
+      "type": "object",
+      "properties": {
+        "individuals_notified": {"type": "boolean"},
+        "individuals_notification_date": {"type": "string", "format": "date"},
+        "hhs_notified": {"type": "boolean"},
+        "hhs_notification_date": {"type": "string", "format": "date"},
+        "media_notified": {"type": "boolean"},
+        "media_notification_date": {"type": "string", "format": "date"}
+      }
+    },
+    "mitigation": {"type": "array", "items": {"type": "string"}},
+    "root_cause": {"type": "string"}
+  }
+}

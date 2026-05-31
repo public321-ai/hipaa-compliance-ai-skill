@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PHI Inventory",
+  "type": "object",
+  "required": ["inventory_id", "last_updated", "systems"],
+  "properties": {
+    "inventory_id": {"type": "string", "format": "uuid"},
+    "last_updated": {"type": "string", "format": "date-time"},
+    "systems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["system_id", "name", "phi_types", "storage", "transmission", "access_controls"],
+        "properties": {
+          "system_id": {"type": "string"},
+          "name": {"type": "string"},
+          "phi_types": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["name", "dob", "ssn", "mrn", "email", "phone", "address", "biometric", "photo", "diagnosis", "treatment", "billing", "insurance"]}
+          },
+          "storage": {
+            "type": "object",
+            "properties": {
+              "encrypted_at_rest": {"type": "boolean"},
+              "encryption_method": {"type": "string"},
+              "location": {"type": "string", "enum": ["on_premise", "cloud", "hybrid", "third_party"]},
+              "retention_years": {"type": "integer"}
+            }
+          },
+          "transmission": {
+            "type": "object",
+            "properties": {
+              "encrypted_in_transit": {"type": "boolean"},
+              "protocol": {"type": "string"},
+              "external_destinations": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "access_controls": {
+            "type": "object",
+            "properties": {
+              "unique_user_ids": {"type": "boolean"},
+              "role_based": {"type": "boolean"},
+              "mfa": {"type": "boolean"},
+              "auto_logoff_minutes": {"type": "integer"}
+            }
+          },
+          "business_associate": {"type": "string"},
+          "baa_signed": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

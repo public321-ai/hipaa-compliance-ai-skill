@@ -1,0 +1,21 @@
+{
+  "mapping_version": "1.0",
+  "frameworks": {
+    "source": "HIPAA Security Rule",
+    "target": "ISO/IEC 27001:2022"
+  },
+  "mappings": [
+    {"hipaa": "164.308(a)(1) - Security Management", "iso": "A.5.1 - Policies for information security; A.5.7 - Threat intelligence"},
+    {"hipaa": "164.308(a)(3) - Workforce Security", "iso": "A.6.1 - Screening; A.6.3 - Information security awareness"},
+    {"hipaa": "164.308(a)(4) - Access Management", "iso": "A.5.15 - Access control; A.5.18 - Access rights"},
+    {"hipaa": "164.308(a)(5) - Security Awareness", "iso": "A.6.3 - Information security awareness; A.6.4 - Disciplinary process"},
+    {"hipaa": "164.308(a)(6) - Incident Procedures", "iso": "A.5.24 - Information security incident management"},
+    {"hipaa": "164.308(a)(7) - Contingency Plan", "iso": "A.5.29 - Information security during disruption; A.5.30 - ICT readiness for continuity"},
+    {"hipaa": "164.310 - Physical Safeguards", "iso": "A.7.1 - Physical security perimeters; A.7.2 - Physical entry; A.7.3 - Securing offices"},
+    {"hipaa": "164.312(a) - Access Control", "iso": "A.5.15 - Access control; A.5.16 - Identity management"},
+    {"hipaa": "164.312(b) - Audit Controls", "iso": "A.8.15 - Logging; A.8.16 - Monitoring activities"},
+    {"hipaa": "164.312(c) - Integrity", "iso": "A.8.10 - Information deletion; A.8.11 - Data masking"},
+    {"hipaa": "164.312(d) - Authentication", "iso": "A.5.17 - Authentication information"},
+    {"hipaa": "164.312(e) - Transmission Security", "iso": "A.8.22 - Separation of networks; A.8.23 - Web filtering; A.8.24 - Use of cryptography"}
+  ]
+}

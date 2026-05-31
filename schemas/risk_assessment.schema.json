@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HIPAA Risk Assessment",
+  "type": "object",
+  "required": ["assessment_id", "date", "assessor", "assets"],
+  "properties": {
+    "assessment_id": {"type": "string", "format": "uuid"},
+    "date": {"type": "string", "format": "date"},
+    "assessor": {"type": "string"},
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["asset_id", "name", "phi_scope", "threats"],
+        "properties": {
+          "asset_id": {"type": "string"},
+          "name": {"type": "string"},
+          "phi_scope": {"type": "string", "enum": ["full", "partial", "metadata", "none"]},
+          "threats": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["threat_id", "description", "vulnerability", "likelihood", "impact", "risk_score"],
+              "properties": {
+                "threat_id": {"type": "string"},
+                "description": {"type": "string"},
+                "vulnerability": {"type": "string"},
+                "likelihood": {"type": "integer", "minimum": 1, "maximum": 5},
+                "impact": {"type": "integer", "minimum": 1, "maximum": 5},
+                "risk_score": {"type": "integer", "minimum": 1, "maximum": 25},
+                "mitigation": {"type": "string"},
+                "owner": {"type": "string"},
+                "due_date": {"type": "string", "format": "date"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

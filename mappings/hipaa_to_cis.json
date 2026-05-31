@@ -1,0 +1,21 @@
+{
+  "mapping_version": "1.0",
+  "frameworks": {
+    "source": "HIPAA Security Rule",
+    "target": "CIS Controls v8.1"
+  },
+  "mappings": [
+    {"hipaa": "164.308(a)(1)(ii)(A) - Risk Analysis", "cis": "CIS 7.1 - Establish and Maintain a Vulnerability Management Process"},
+    {"hipaa": "164.308(a)(3) - Workforce Security", "cis": "CIS 6.1 - Establish an Access Granting Process; CIS 6.2 - Establish an Access Revoking Process"},
+    {"hipaa": "164.308(a)(4) - Access Management", "cis": "CIS 6.3 - Require MFA; CIS 6.8 - Define and Maintain Role-Based Access Control"},
+    {"hipaa": "164.308(a)(5) - Security Awareness", "cis": "CIS 14.1 - Establish and Maintain a Security Awareness Program"},
+    {"hipaa": "164.308(a)(6) - Incident Procedures", "cis": "CIS 17.1 - Designate Personnel to Manage Incident Handling"},
+    {"hipaa": "164.308(a)(7) - Contingency Plan", "cis": "CIS 11.1 - Establish and Maintain a Data Recovery Process"},
+    {"hipaa": "164.310 - Physical Safeguards", "cis": "CIS 9.1 - Ensure Adequate Physical Security; CIS 9.2 - Ensure Adequate Environmental Security"},
+    {"hipaa": "164.312(a) - Access Control", "cis": "CIS 6.1 - Access Granting; CIS 6.7 - Centralize Access Control"},
+    {"hipaa": "164.312(b) - Audit Controls", "cis": "CIS 8.1 - Establish and Maintain an Audit Log Management Process"},
+    {"hipaa": "164.312(c) - Integrity", "cis": "CIS 3.3 - Configure Data Access Control Lists"},
+    {"hipaa": "164.312(d) - Authentication", "cis": "CIS 6.3 - Require MFA; CIS 6.4 - Require MFA for Remote Access"},
+    {"hipaa": "164.312(e) - Transmission Security", "cis": "CIS 13.1 - Centralize Network Traffic Flow; CIS 13.2 - Deploy a Network Intrusion Detection Solution"}
+  ]
+}
